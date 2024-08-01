@@ -1,0 +1,164 @@
+// @font-face {
+//     font-family: "SVN-Unthrift";
+//     src: url(font/SVN-Unthrift.otf);
+// }
+@font-face {
+    font-family: 'GoogleSans-Black';
+    src: url(../font/GoogleSans-Black.otf);
+}
+
+@font-face {
+    font-family: 'GoogleSans-Light';
+    src: url(../font/GoogleSans-Light.otf);
+}
+
+@font-face {
+    font-family: 'GoogleSans-Bold';
+    src: url(../font/GoogleSans-Bold.otf);
+}
+
+@font-face {
+    font-family: 'GoogleSans-Medium';
+    src: url(../font/GoogleSans-Medium.otf);
+}
+
+// @font-face {
+//     font-family: 'GoogleSans-Regular';
+//     src: url(font/GoogleSans-Regular.otf);
+// }
+:root {
+    --primary-color: #91c63e;
+    --second-color: #2a6eb6;
+    --normal-color: #333;
+    --font-light: "GoogleSans-Light";
+    --font-black: "GoogleSans-Black";
+    --font-bold: "GoogleSans-Bold";
+    --font-medium: "GoogleSans-Medium";
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+    max-width: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-light) !important;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--normal-color);
+}
+
+b,
+strong {
+    font-family: var(--font-bold) !important;
+    font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-black) !important;
+}
+
+.container {
+    max-width: 1360px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.wrapper {
+    background-color: #e6e6e6;
+}
+
+.flex-left {
+    margin-right: auto;
+}
+
+.flex-right {
+    margin-left: auto;
+}
+
+.flex-col {
+    max-height: 100%;
+}
+
+@media(min-width:992px) {
+    .hidden-lg {
+        display: none;
+    }
+}
+
+.slick-arrow {
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slick-prev {
+    left: 20px;
+    &::before {
+        content: '\f104';
+        font-family: fontawesome;
+        opacity: 1;
+    }
+}
+
+.slick-next {
+    right: 20px;
+    &::before {
+        content: '\f105';
+        font-family: fontawesome;
+        opacity: 1;
+    }
+}
+
+@import 'header';
+@import 'main';
+@import 'footer';
